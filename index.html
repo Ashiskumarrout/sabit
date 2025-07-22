@@ -251,7 +251,7 @@
    <nav class="navbar navbar-expand-lg shadow px-3 scanlines" style="position: relative;">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
-      <img src="Ashis_logo-removebg-preview1.png" alt="Logo" class="navbar-logo neon-border">
+      <img src="Sipra (300 x 300 px).png" alt="Logo" class="navbar-logo neon-border">
     </a>
 
     <span class="d-none d-lg-flex align-items-center ms-3" style="font-size:1.3rem;">
@@ -300,23 +300,29 @@
 
 
    <!-- Hero Section -->
-<section data-aos="fade-up" data-aos-duration="2000" style="position:relative; overflow:hidden;">
+<section id="home" data-aos="fade-up" data-aos-duration="2000" style="position:relative; overflow:hidden; min-height:100vh; background: linear-gradient(135deg, rgba(0,0,0,0.8), rgba(26,26,46,0.8));">
   <div id="particles-js-hero"></div>
-  <div class="container position-relative" style="z-index:1;">
-    <div class="row align-items-center">
-      <div class="col order-last text-center">
-        <img src="mybestphto.png" alt="Ashis" class="profile-photo" data-aos="zoom-in" data-aos-duration="2000">
+  <div class="container position-relative" style="z-index:10; padding-top: 150px;">
+    <div class="row align-items-center min-vh-100">
+      <div class="col-md-6 order-md-2 text-center">
+        <div class="profile-wrapper neon-border" style="display: inline-block; padding: 20px;">
+          <img src="WhatsApp Image 2025-07-20 at 14.53.33_adc71b74.jpg" alt="Sipra" class="profile-photo img-fluid" style="max-width: 300px; border-radius: 20px;" data-aos="zoom-in" data-aos-duration="2000">
+        </div>
       </div>
-      <div class="col text-center">
+      <div class="col-md-6 order-md-1 text-center text-md-start">
         <p data-aos="fade-up" data-aos-duration="2000" class="matrix-text" style="font-size: 1.5rem;">MCA Student & Web Developer</p>
         <h1 data-aos="fade-up" data-aos-duration="2000">
-          Hi, I'm <span class="glitch-text" data-text="Siprasubhasmita Nayak">Siprasubhasmita Nayak</span><br>
+          Hi, I'm <span class="matrix-text" style="font-size: 3rem; font-weight: bold;">Siprasubhasmita Nayak</span><br>
           <span class="matrix-text" style="font-size: 2rem;">Your Web Development Partner</span>
         </h1>
         <p data-aos="fade-up" data-aos-duration="2000" style="color: #00ffff; font-size: 1.2rem;">
           Enthusiastic fresher passionate about crafting modern web applications.<br>
           Specializing in <strong style="color: #ff00ff;">HTML</strong>, <strong style="color: #ffff00;">CSS</strong>, <strong style="color: #00ff00;">JavaScript</strong>, and <strong style="color: #ff00ff;">Java</strong>.
         </p>
+        <div class="mt-4">
+          <a href="#contact" class="cyber-btn me-3" data-aos="fade-up" data-aos-duration="2000">Get In Touch</a>
+          <a href="#portfolio" class="cyber-btn" style="border-color: #ff00ff; color: #ff00ff;" data-aos="fade-up" data-aos-duration="2000">View Work</a>
+        </div>
       </div>
     </div>
   </div>
@@ -328,43 +334,101 @@
 particlesJS('particles-js-hero', {
   "particles": {
     "number": {
-      "value": 200,  // ⬅️ Increased from 60 to 120
+      "value": 150,
       "density": {
         "enable": true,
         "value_area": 800
       }
     },
-    "color": { "value": "#ffffff" },
-    "shape": { "type": "circle" },
-    "opacity": { "value": 0.5, "random": false },
-    "size": { "value": 3, "random": true },
+    "color": { 
+      "value": ["#00ffff", "#ff00ff", "#ffff00", "#00ff00"] 
+    },
+    "shape": { 
+      "type": "circle",
+      "stroke": {
+        "width": 0,
+        "color": "#000000"
+      }
+    },
+    "opacity": { 
+      "value": 0.8, 
+      "random": true,
+      "anim": {
+        "enable": true,
+        "speed": 1,
+        "opacity_min": 0.1,
+        "sync": false
+      }
+    },
+    "size": { 
+      "value": 4, 
+      "random": true,
+      "anim": {
+        "enable": true,
+        "speed": 2,
+        "size_min": 0.1,
+        "sync": false
+      }
+    },
     "line_linked": {
       "enable": true,
       "distance": 150,
-      "color": "#ffffff",
-      "opacity": 0.4,
-      "width": 1
+      "color": "#00ffff",
+      "opacity": 0.6,
+      "width": 2
     },
     "move": {
       "enable": true,
-      "speed": 2,
+      "speed": 3,
       "direction": "none",
-      "random": false,
+      "random": true,
       "straight": false,
       "out_mode": "out",
-      "bounce": false
+      "bounce": false,
+      "attract": {
+        "enable": true,
+        "rotateX": 600,
+        "rotateY": 1200
+      }
     }
   },
   "interactivity": {
     "detect_on": "canvas",
     "events": {
-      "onhover": { "enable": true, "mode": "repulse" },
-      "onclick": { "enable": true, "mode": "push" },
+      "onhover": { 
+        "enable": true, 
+        "mode": "repulse" 
+      },
+      "onclick": { 
+        "enable": true, 
+        "mode": "push" 
+      },
       "resize": true
     },
     "modes": {
-      "repulse": { "distance": 100, "duration": 0.4 },
-      "push": { "particles_nb": 4 }
+      "grab": {
+        "distance": 400,
+        "line_linked": {
+          "opacity": 1
+        }
+      },
+      "bubble": {
+        "distance": 400,
+        "size": 40,
+        "duration": 2,
+        "opacity": 8,
+        "speed": 3
+      },
+      "repulse": { 
+        "distance": 200, 
+        "duration": 0.4 
+      },
+      "push": { 
+        "particles_nb": 4 
+      },
+      "remove": {
+        "particles_nb": 2
+      }
     }
   },
   "retina_detect": true
@@ -374,8 +438,27 @@ particlesJS('particles-js-hero', {
 <style>
 #particles-js-hero {
   position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
-  z-index: 0;
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%;
+  z-index: 1;
+  background: transparent;
+}
+
+.profile-wrapper {
+  position: relative;
+  z-index: 15;
+}
+
+.profile-photo {
+  filter: drop-shadow(0 0 20px #00ffff);
+  transition: all 0.3s ease;
+}
+
+.profile-photo:hover {
+  filter: drop-shadow(0 0 30px #ff00ff);
+  transform: scale(1.05);
 }
 </style>
 
